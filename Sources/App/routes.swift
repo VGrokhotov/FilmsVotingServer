@@ -23,6 +23,6 @@ public func routes(_ router: Router) throws {
     router.get("rooms", "name", String.parameter, use: roomController.showUsingName)
     router.get("rooms", Room.parameter, use: roomController.showUsingId)
     router.post("rooms", use: roomController.create)
-    router.put("rooms", User.parameter, use: roomController.update)
-    router.delete("rooms", User.parameter, use: roomController.delete)
+    router.put("rooms", Room.parameter, use: roomController.update)
+    router.delete("rooms", Room.parameter, use: roomController.delete)
 }
