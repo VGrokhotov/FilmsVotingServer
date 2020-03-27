@@ -55,7 +55,7 @@ final class UserController {
         return try flatMap(to: User.self, req.parameters.next(User.self), req.content.decode(User.self)) { user, updatedUser in
             user.name = updatedUser.name
             user.password = updatedUser.password
-            user.login = updatedUser.login
+//            user.login = updatedUser.login
             return user.save(on: req)
         }
     }

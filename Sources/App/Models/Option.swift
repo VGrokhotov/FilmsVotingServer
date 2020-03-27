@@ -20,12 +20,14 @@ final class Option: PostgreSQLModel, Migration, Content, Parameter, SQLTable{
     
     var id: Int?
     var content: String
+    var vote: Int
     var roomID: Int
     
     
-    init(id: Int? = nil, content: String, roomID: Int) {
+    init(id: Int? = nil, content: String, roomID: Int, vote: Int = 0) {
         self.id = id
         self.content = content
         self.roomID = roomID
+        self.vote = vote
     }
 }

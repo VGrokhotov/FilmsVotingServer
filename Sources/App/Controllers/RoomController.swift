@@ -55,8 +55,8 @@ final class RoomController {
     func update(_ req: Request) throws -> Future<Room> {
         return try flatMap(to: Room.self, req.parameters.next(Room.self), req.content.decode(Room.self)) { room, updatedRoom in
             room.name = updatedRoom.name
-            room.password = updatedRoom.password
-            room.creatorID = updatedRoom.creatorID
+//            room.password = updatedRoom.password
+//            room.creatorID = updatedRoom.creatorID
             room.isVotingAvailable = updatedRoom.isVotingAvailable
             room.users = updatedRoom.users
             return room.save(on: req)
