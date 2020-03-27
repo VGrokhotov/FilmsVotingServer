@@ -17,7 +17,7 @@ final class UserController {
         return User.query(on: req).all()
     }
     
-    func show(_ req: Request) throws -> Future<User>{
+    func showUsingLogin(_ req: Request) throws -> Future<User>{
         let login = try req.parameters.next(String.self)
         
         return req.withPooledConnection(to: .psql) { connection in
@@ -32,6 +32,10 @@ final class UserController {
                     }
             }
         }
+    }
+    
+    func showUsingId(_ req: Request) throws -> Future<User>{
+        return try req.parameters.next(User.self)
     }
     
     
