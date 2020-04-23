@@ -19,13 +19,13 @@ final class Room: PostgreSQLModel, Migration, Content, Parameter, SQLTable{
     
     var id: Int?
     var name: String
-    var password: Int
+    var password: String
     var creatorID: Int
     var isVotingAvailable: Bool
     var users: [Int]
     
     
-    init(id: Int? = nil, name: String, password: Int, creatorID: Int, isVotingAvailable: Bool = false, users: [Int] = []) {
+    init(id: Int? = nil, name: String, password: String, creatorID: Int, isVotingAvailable: Bool = false, users: [Int] = []) {
         self.id = id
         self.name = name
         self.password = password
