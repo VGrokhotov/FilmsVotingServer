@@ -39,7 +39,7 @@ public func routes(_ router: Router) throws {
 
                 var id: Int?
                 var name: String
-                var password: Int
+                var password: String
                 var creatorID: Int
                 var isVotingAvailable: Bool
                 var users: [Int]
