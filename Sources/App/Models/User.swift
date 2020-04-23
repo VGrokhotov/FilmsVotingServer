@@ -20,10 +20,10 @@ final class User: PostgreSQLModel, Migration, Content, Parameter, SQLTable{
     var id: Int?
     var name: String
     var login: String
-    var password: Int
+    var password: String
     
     
-    init(name: String, login: String, id: Int? = nil, password: Int) {
+    init(name: String, login: String, id: Int? = nil, password: String) {
         self.name = name
         self.id = id
         self.password = password

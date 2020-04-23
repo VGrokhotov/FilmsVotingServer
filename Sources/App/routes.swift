@@ -16,7 +16,7 @@ public func routes(_ router: Router) throws {
                 var id: Int?
                 var name: String
                 var login: String
-                var password: Int
+                var password: String
 
 
         *    Requests:
